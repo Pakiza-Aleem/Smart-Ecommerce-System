@@ -13,6 +13,12 @@
 </p>
 
 <p>
+  <a href="https://zentro-shopping.vercel.app">
+    <img src="https://img.shields.io/badge/LIVE_DEMO-991B1B?style=for-the-badge&logo=vercel&logoColor=white"/>
+  </a>
+</p>
+
+<p>
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
@@ -22,6 +28,8 @@
 </p>
 
 </div>
+
+> **Deployment Note:** ZENTRO is currently hosted using free-tier services. As a result, the application may take a few seconds to respond on the first request after a period of inactivity due to the hosting service waking the application. Subsequent requests should respond normally.
 
 ---
 
@@ -459,46 +467,77 @@ ZENTRO currently focuses on the core functionality required for a modern full-st
 
 <div align="center">
 
-### Frontend
+### ⚛️ FRONTEND
 
-<img src="https://skillicons.dev/icons?i=react,vite,js,html,css,axios,reactrouter" />
-
-<br><br>
-
-### Backend
-
-<img src="https://skillicons.dev/icons?i=nodejs,express" />
-
-<br><br>
-
-### Database & Authentication
-
-<img src="https://skillicons.dev/icons?i=mongodb" />
-
-<br>
-
-<img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white"/>
-<img src="https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=20232A"/>
+<img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/React_Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white"/>
+<img src="https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=axios&logoColor=white"/>
 
 <br><br>
 
-### Cloud & AI
+### 🖥️ BACKEND
 
-<img src="https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white"/>
-<img src="https://img.shields.io/badge/Multer-FF6B35?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white"/>
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white"/>
+<img src="https://img.shields.io/badge/REST_API-991B1B?style=flat-square"/>
 
 <br><br>
 
-### Development & Deployment
+### 🗄️ DATABASE & AUTH
 
-<img src="https://skillicons.dev/icons?i=postman,git,github,vercel" />
+<img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
+<img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white"/>
+<img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white"/>
 
-<br>
+<br><br>
 
-<img src="https://img.shields.io/badge/Abasthan-111827?style=for-the-badge"/>
+### ☁️ CLOUD & AI
+
+<img src="https://img.shields.io/badge/Multer-FF6B35?style=flat-square"/>
+<img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white"/>
+<img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white"/>
+
+<br><br>
+
+### 🛠️ DEVELOPMENT
+
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white"/>
+
+<br><br>
+
+### 🌐 HOSTING
+
+<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"/>
+<img src="https://img.shields.io/badge/Abasthan-991B1B?style=flat-square"/>
+<img src="https://img.shields.io/badge/MongoDB_Atlas-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
 
 </div>
+
+<br>
+
+<table align="center">
+<tr>
+<td align="center"><strong>Frontend</strong><br>React-based responsive UI</td>
+<td align="center"><strong>Backend</strong><br>RESTful Express API</td>
+<td align="center"><strong>Database</strong><br>MongoDB + Mongoose</td>
+</tr>
+<tr>
+<td align="center"><strong>Authentication</strong><br>JWT-based security</td>
+<td align="center"><strong>Cloud</strong><br>Cloudinary media storage</td>
+<td align="center"><strong>AI</strong><br>Gemini-powered ZEN</td>
+</tr>
+<tr>
+<td align="center"><strong>Development</strong><br>Git · GitHub · Postman</td>
+<td align="center"><strong>Frontend Hosting</strong><br>Vercel</td>
+<td align="center"><strong>Backend Hosting</strong><br>Abasthan</td>
+</tr>
+</table>
 
 ---
 
@@ -520,7 +559,6 @@ Through ZENTRO, the project demonstrates practical experience with:
 * Managing asynchronous frontend-backend communication
 * Structuring a multi-feature full-stack application
 * Working with environment-based configuration
-* Testing APIs during development
 * Deploying full-stack application components
 
 ---
@@ -556,6 +594,10 @@ Through ZENTRO, the project demonstrates practical experience with:
 **Explore the code, check out the design work, and follow along for more full-stack projects.**
 
 <br>
+
+<a href="https://zentro-shopping.vercel.app">
+  <img src="https://img.shields.io/badge/LIVE_DEMO-991B1B?style=for-the-badge&logo=vercel&logoColor=white"/>
+</a>
 
 <a href="https://github.com/Pakiza-Aleem">
   <img src="https://img.shields.io/badge/VIEW_ON_GITHUB-991B1B?style=for-the-badge&logo=github&logoColor=white"/>
