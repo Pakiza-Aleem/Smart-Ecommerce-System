@@ -1,157 +1,257 @@
-/* product.css - ZENTRO product cards + details */
+/* =========================================
+   ZENTRO PRODUCT CSS
+   Black / Red / White Theme
+   ========================================= */
+
+
+/* =========================================
+   PRODUCT GRID
+   ========================================= */
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-5);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
+
+
+/* =========================================
+   PRODUCT CARD
+   ========================================= */
 
 .product-card {
   position: relative;
+
   display: flex;
   flex-direction: column;
+
   height: 100%;
   overflow: hidden;
+
   padding: 0;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  transition: 0.2s ease;
 }
 
 .product-card:hover {
+  border-color: var(--red);
   transform: translateY(-3px);
-  border-color: #D1D5DB;
-  box-shadow: var(--shadow-md);
 }
+
+
+/* =========================================
+   PRODUCT IMAGE
+   ========================================= */
 
 .product-card-image-wrap {
   position: relative;
 }
 
 .product-card-image {
+  display: block;
+
   width: 100%;
   height: 210px;
-  object-fit: cover;
-  padding: var(--space-5);
-  background: var(--color-surface-soft);
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
+
+  object-fit: contain;
+
+  padding: 16px;
+
+  background: #f5f5f5;
 }
+
+
+/* =========================================
+   WISHLIST BUTTON
+   ========================================= */
 
 .wishlist-btn {
   position: absolute;
-  top: var(--space-3);
-  right: var(--space-3);
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(2px);
+  top: 10px;
+  right: 10px;
+
+  background: white;
+  color: var(--black);
+
+  border: 1px solid var(--border);
 }
+
+.wishlist-btn:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: white;
+}
+
+
+/* =========================================
+   PRODUCT CARD CONTENT
+   ========================================= */
 
 .product-card-body {
   display: flex;
-  flex: 1;
   flex-direction: column;
-  padding: var(--space-4);
+  flex: 1;
+
+  padding: 16px;
 }
 
 .product-card-brand {
-  margin: 0 0 2px;
-  color: var(--color-text-muted);
-  font-size: 12px;
-  font-weight: 650;
+  margin: 0 0 4px;
+
+  color: #777;
+
+  font-size: 11px;
+  font-weight: 700;
+
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
 }
 
 .product-card-name {
-  margin: 0 0 var(--space-1);
+  margin: 0 0 6px;
+
+  color: var(--black);
+
   font-size: 16px;
+  line-height: 1.3;
 }
 
 .product-card-category {
-  margin: 0 0 var(--space-2);
-  color: var(--color-text-muted);
+  margin: 0 0 8px;
+
+  color: #777;
   font-size: 12px;
-}
-
-.product-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: auto;
-  padding-top: var(--space-3);
-}
-
-.product-card-footer .product-price {
-  margin: 0;
 }
 
 .product-card-body p {
-  margin-bottom: var(--space-2);
+  margin-bottom: 8px;
 }
+
+
+/* =========================================
+   PRODUCT CATEGORY
+   ========================================= */
 
 .product-category {
-  color: var(--color-text-muted);
-  font-size: 12px;
-  font-weight: 600;
+  color: #777;
+
+  font-size: 11px;
+  font-weight: 700;
+
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
 }
 
+
+/* =========================================
+   PRODUCT PRICE
+   ========================================= */
+
 .product-price {
-  margin: var(--space-2) 0;
-  color: var(--color-text);
+  margin: 8px 0;
+
+  color: var(--black);
+
   font-size: 18px;
   font-weight: 800;
 }
 
 .product-price .discount {
-  margin-left: 7px;
-  color: var(--color-danger);
+  margin-left: 6px;
+
+  color: var(--red);
+
   font-size: 12px;
-  font-weight: 650;
+  font-weight: 700;
 }
+
+
+/* =========================================
+   RATING
+   ========================================= */
 
 .product-rating,
 .product-card-rating {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  color: var(--color-accent-dark);
+
+  color: var(--red);
+
   font-size: 13px;
 }
 
 .product-card-rating .muted {
-  color: var(--color-text-muted);
+  color: #777;
 }
+
+
+/* =========================================
+   CARD FOOTER
+   ========================================= */
+
+.product-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.product-card-footer .product-price {
+  margin: 0;
+}
+
+
+/* =========================================
+   STOCK
+   ========================================= */
 
 .product-stock {
   margin-top: auto;
-  padding-top: var(--space-3);
-  color: var(--color-text-muted);
+  padding-top: 12px;
+
+  color: #777;
+
   font-size: 12px;
 }
 
+
+/* Product card button */
+
 .product-card .btn {
   width: 100%;
-  margin-top: var(--space-3);
+  margin-top: 12px;
 }
+
+
+/* =========================================
+   COMPARE
+   ========================================= */
 
 .compare-wrapper {
   position: relative;
 }
 
 .compare-wrapper.selected .product-card {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.10), var(--shadow-md);
+  border: 2px solid var(--red);
 }
 
 .compare-checkbox {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: var(--space-2);
-  color: var(--color-text-muted);
+
+  margin-bottom: 8px;
+
+  color: #666;
+
   font-size: 12px;
   font-weight: 600;
 }
@@ -159,59 +259,95 @@
 .compare-checkbox input {
   width: auto;
   min-height: auto;
-  accent-color: var(--color-primary);
+
+  accent-color: var(--red);
 }
+
+
+/* =========================================
+   PRODUCT DETAILS
+   ========================================= */
 
 .product-details-top {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
-  gap: var(--space-10);
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
   align-items: start;
-  padding: var(--space-8);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+
+  padding: 24px;
+
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
 }
 
+
+/* Large product image */
+
 .product-details-image {
+  display: block;
+
   width: 100%;
   max-height: 540px;
+
   object-fit: contain;
-  padding: var(--space-8);
-  border-radius: var(--radius-md);
-  background: var(--color-surface-soft);
+
+  padding: 24px;
+
+  background: #f5f5f5;
+  border-radius: 6px;
 }
+
+
+/* Product information */
 
 .product-details-info {
   min-width: 0;
 }
 
 .product-details-info h1 {
-  margin-bottom: var(--space-3);
-  font-size: clamp(1.8rem, 3.2vw, 2.75rem);
+  margin-bottom: 12px;
+
+  color: var(--black);
+
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.15;
 }
 
 .product-details-info .product-price {
-  margin: var(--space-4) 0;
+  margin: 16px 0;
   font-size: 28px;
 }
 
+
+/* =========================================
+   PRODUCT META
+   ========================================= */
+
 .product-meta {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-3);
-  margin-bottom: var(--space-5);
-  color: var(--color-text-muted);
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 20px;
+
+  color: #666;
+
   font-size: 13px;
 }
+
+
+/* =========================================
+   PRODUCT ACTIONS
+   ========================================= */
 
 .product-actions,
 .product-details-actions {
   display: flex;
-  gap: var(--space-3);
-  margin-top: var(--space-6);
+  gap: 10px;
+
+  margin-top: 20px;
 }
 
 .product-actions .btn,
@@ -223,94 +359,145 @@
   font-size: 28px;
 }
 
+
+/* Stock status */
+
 .in-stock {
-  color: var(--color-success);
+  color: #16803c;
   font-weight: 700;
 }
 
 .out-of-stock {
-  color: var(--color-danger);
+  color: var(--red);
   font-weight: 700;
 }
 
+
+/* =========================================
+   SPECIFICATIONS
+   ========================================= */
+
 .spec-table {
   width: 100%;
-  margin: var(--space-5) 0;
+  margin: 20px 0;
+
   border-collapse: collapse;
 }
 
 .spec-table td {
-  padding: 11px 0;
-  border-bottom: 1px solid var(--color-border);
-  color: var(--color-text-secondary);
+  padding: 10px 0;
+
+  border-bottom: 1px solid var(--border);
+
+  color: #444;
 }
 
 .spec-table td:first-child {
   width: 38%;
-  color: var(--color-text-muted);
+
+  color: #777;
+
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 700;
 }
+
+
+/* =========================================
+   ASK ZEN
+   ========================================= */
 
 .ask-zen-section,
 .reviews-section {
-  margin-top: var(--space-10);
+  margin-top: 32px;
 }
 
 .ask-zen-section {
-  padding: clamp(24px, 4vw, 40px);
-  background: var(--color-primary-light);
-  border: 1px solid var(--color-primary-soft);
-  border-radius: var(--radius-lg);
+  padding: 24px;
+
+  background: #111;
+  border-radius: 8px;
+
+  color: white;
+  border-left: 4px solid var(--red);
 }
 
 .ask-zen-section h2 {
-  margin-bottom: var(--space-2);
-  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+  color: white;
 }
+
+
+/* AI / ZEN search */
 
 .ai-search-form {
   display: flex;
-  gap: var(--space-2);
-  margin-top: var(--space-5);
+  gap: 8px;
+
+  margin-top: 16px;
 }
 
 .ai-search-form input {
   flex: 1;
 }
 
+
+/* AI answer */
+
 .ai-answer {
-  margin-top: var(--space-5);
-  padding: var(--space-4);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  color: var(--color-text-secondary);
+  margin-top: 16px;
+  padding: 14px;
+
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  color: #333;
 }
 
+
+/* AI results */
+
+.ai-results {
+  margin-top: 20px;
+}
+
+
+/* =========================================
+   REVIEWS
+   ========================================= */
+
 .review {
-  padding: var(--space-4);
-  margin-bottom: var(--space-3);
+  padding: 16px;
+  margin-bottom: 12px;
+
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 6px;
 }
 
 .review-header {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  margin-bottom: var(--space-1);
+  gap: 8px;
+
+  margin-bottom: 4px;
 }
 
 .review-stars {
   display: inline-flex;
-  color: var(--color-accent);
+  color: var(--red);
 }
+
+
+/* Review form */
 
 .review-form {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-2);
-  margin-top: var(--space-5);
   flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 20px;
 }
 
 .review-form input,
@@ -318,9 +505,15 @@
   flex: 1 1 220px;
 }
 
+
+/* =========================================
+   RESPONSIVE — TABLET
+   ========================================= */
+
 @media (max-width: 1100px) {
+
   .product-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .product-details-top {
@@ -328,25 +521,32 @@
   }
 }
 
+
+/* =========================================
+   RESPONSIVE — MOBILE
+   ========================================= */
+
 @media (max-width: 768px) {
+
   .product-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-3);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .product-card-image {
     height: 170px;
-    padding: var(--space-4);
+    padding: 12px;
   }
 
   .product-card-body {
-    padding: var(--space-3);
+    padding: 12px;
   }
 
   .product-details-top {
     grid-template-columns: 1fr;
-    padding: var(--space-4);
-    gap: var(--space-6);
+
+    padding: 16px;
+    gap: 20px;
   }
 
   .product-details-image {
@@ -359,7 +559,13 @@
   }
 }
 
+
+/* =========================================
+   RESPONSIVE — SMALL PHONE
+   ========================================= */
+
 @media (max-width: 480px) {
+
   .product-grid {
     grid-template-columns: 1fr;
   }
@@ -379,12 +585,13 @@
   }
 }
 
-.cart-btn:hover {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: #fff;
-}
 
-.ai-results {
-  margin-top: var(--space-6);
+/* =========================================
+   CART BUTTON
+   ========================================= */
+
+.cart-btn:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: white;
 }
