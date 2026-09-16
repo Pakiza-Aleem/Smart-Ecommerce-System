@@ -138,6 +138,105 @@ Products, cart, wishlist & orders
 </table>
 
 ---
+---
+
+## 📸 Screenshots
+
+Explore the main shopping, authentication, AI, and admin interfaces of ZENTRO.
+
+<table>
+<tr>
+<td width="50%" align="center">
+
+### 🏠 Home Page
+
+<img src="screenshots/home%20page.png" width="100%"/>
+
+</td>
+
+<td width="50%" align="center">
+
+### 🛍️ Shop Page
+
+<img src="screenshots/shop%20page.png" width="100%"/>
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" align="center">
+
+### 🔐 Login
+
+<img src="screenshots/login.png" width="100%"/>
+
+</td>
+
+<td width="50%" align="center">
+
+### 📝 Register
+
+<img src="screenshots/register.png" width="100%"/>
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" align="center">
+
+### 🛒 Cart (4)
+
+<img src="screenshots/cart%20(4).png" width="100%"/>
+
+</td>
+
+<td width="50%" align="center">
+
+### ❤️ Wishlist
+
+<img src="screenshots/wishlist.png" width="100%"/>
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" align="center">
+
+### 📦 Orders Page
+
+<img src="screenshots/orders%20page.png" width="100%"/>
+
+</td>
+
+<td width="50%" align="center">
+
+### 👨‍💼 Admin
+
+<img src="screenshots/admin.png" width="100%"/>
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" align="center">
+
+### 🤖 Zen AI Options
+
+<img src="screenshots/zen%20ai%20options.png" width="100%"/>
+
+</td>
+
+<td width="50%" align="center">
+
+### 🔍 AI Comparing Option
+
+<img src="screenshots/ai%20comparing%20option.png" width="100%"/>
+
+</td>
+</tr>
+</table>
+
+---
 
 ## 🔄 Data Flow
 
