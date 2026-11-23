@@ -37,14 +37,27 @@ export default function Home() {
     <div className="home-page">
       {/* Hero */}
       <section className="hero">
-        <p className="eyebrow">Thoughtfully selected technology</p>
-        <h1>Technology, <span className="highlight">centered on you.</span></h1>
-        <p className="hero-subtext">
-          A considered collection of technology, with a little help from ZEN.
-        </p>
-        <div className="hero-actions">
-          <Link to="/shop" className="btn btn-primary">Explore Products</Link>
-          <button type="button" className="btn btn-outline" onClick={handleAskZen}>Ask ZEN</button>
+        <div className="hero-content">
+          <p className="eyebrow">Thoughtfully selected technology</p>
+          <h1>Technology, <span className="highlight">centered on you.</span></h1>
+          <p className="hero-subtext">
+            A considered collection of technology, with a little help from ZEN.
+          </p>
+          <div className="hero-actions">
+            <Link to="/shop" className="btn btn-primary">Explore Products</Link>
+            <button type="button" className="btn btn-outline" onClick={handleAskZen}>Ask ZEN</button>
+          </div>
+        </div>
+
+        <div className="hero-media">
+          <img
+            src="/images/hero.png"
+            alt="Featured technology"
+            className="hero-image"
+            loading="eager"
+            decoding="async"
+          />
+          <span className="hero-media-tag">Featured / 01</span>
         </div>
       </section>
 
