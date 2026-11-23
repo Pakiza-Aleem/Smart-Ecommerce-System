@@ -1,0 +1,66 @@
+/* =========================================
+   ZENTRO — Design Tokens
+   Theme: "Graphite + Electric"
+   Cool light-gray canvas, charcoal ink,
+   electric-lime accent, hairline rules,
+   sharp technical geometry, zero neon glow.
+   ========================================= */
+
+:root {
+  color-scheme: light;
+
+  /* ---------- Surfaces ---------- */
+  --color-bg: #E7E9EC;          /* cool light-gray page canvas */
+  --color-bg-grid: #DCE0E5;     /* blueprint grid line */
+  --color-surface: #FFFFFF;     /* cards / panels */
+  --color-surface-2: #F2F4F6;   /* inputs, subtle insets */
+
+  /* ---------- Ink ---------- */
+  --color-ink: #14161A;         /* primary charcoal text */
+  --color-ink-2: #2C3037;       /* secondary text */
+  --color-muted: #6A7079;       /* muted / captions */
+  --color-faint: #9AA0A8;       /* faintest text */
+
+  /* ---------- Hairlines ---------- */
+  --color-border: #D6DAE0;      /* default hairline */
+  --color-border-2: #C1C7CF;    /* stronger hairline */
+
+  /* ---------- Electric accent ---------- */
+  --color-accent: #C9F227;      /* electric lime (fills, highlights) */
+  --color-accent-2: #B2E000;    /* hover / pressed */
+  --color-accent-ink: #141A00;  /* text/icon on accent */
+  --color-accent-soft: rgba(201, 242, 39, 0.16);
+  --color-accent-line: rgba(140, 170, 0, 0.5);
+
+  /* ---------- Status ---------- */
+  --color-success: #1F9D57;
+  --color-danger: #E5484D;
+
+  /* ---------- Geometry (sharp / technical) ---------- */
+  --radius-card: 6px;
+  --radius-input: 4px;
+  --radius-btn: 4px;
+  --radius-tag: 3px;
+  --radius-pill: 999px;
+
+  /* ---------- Elevation (flat, low, no glow) ---------- */
+  --shadow-card: 0 1px 2px rgba(20, 22, 26, 0.05), 0 10px 26px rgba(20, 22, 26, 0.06);
+  --shadow-hover: 0 2px 4px rgba(20, 22, 26, 0.08), 0 18px 36px rgba(20, 22, 26, 0.1);
+
+  /* ---------- Type ---------- */
+  --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", "Cascadia Code", monospace;
+
+  /* ---------- Compatibility aliases ----------
+     Older stylesheets (global/navbar/product/pages/zen) still reference
+     these names. Remapping them keeps every legacy rule on-palette. */
+  --black: var(--color-ink);
+  --dark: var(--color-ink);
+  --white: var(--color-surface);
+  --light: var(--color-surface-2);
+  --gray: var(--color-muted);
+  --border: var(--color-border);
+  --red: var(--color-accent-2);
+  --red-dark: var(--color-ink);
+}

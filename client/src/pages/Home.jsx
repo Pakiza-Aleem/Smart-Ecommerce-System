@@ -37,11 +37,10 @@ export default function Home() {
     <div className="home-page">
       {/* Hero */}
       <section className="hero">
-        <p className="eyebrow">ZENTRO — AI-Powered Intelligent Shopping Platform</p>
-        <h1>Technology that fits the way you live.</h1>
+        <p className="eyebrow">Thoughtfully selected technology</p>
+        <h1>Technology, <span className="highlight">centered on you.</span></h1>
         <p className="hero-subtext">
-          Browse a curated catalog of smartphones, laptops, audio and more, then let ZEN help you search,
-          compare and understand every product before you buy.
+          A considered collection of technology, with a little help from ZEN.
         </p>
         <div className="hero-actions">
           <Link to="/shop" className="btn btn-primary">Explore Products</Link>

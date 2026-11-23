@@ -7,6 +7,11 @@ import { addToCart } from '../store/slices/cartSlice';
 import { addToWishlist, removeFromWishlist, selectIsWishlisted } from '../store/slices/wishlistSlice';
 import { formatPKR } from '../utils/format';
 
+// On-theme fallback shown when a product has no image: a clean graphite
+// blueprint tile with an electric accent mark, instead of a stock placeholder.
+const FALLBACK_IMAGE =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23F2F4F6'/%3E%3Cg stroke='%23DCE0E5' stroke-width='1'%3E%3Cpath d='M0 60h400M0 120h400M0 180h400M0 240h400M80 0v300M160 0v300M240 0v300M320 0v300'/%3E%3C/g%3E%3Crect x='14' y='14' width='372' height='272' fill='none' stroke='%23C1C7CF' stroke-width='2'/%3E%3Crect x='186' y='118' width='28' height='28' fill='%23C9F227' stroke='%2314161A' stroke-width='2'/%3E%3Cpath d='M196 126l10 6-10 6z' fill='%2314161A'/%3E%3Ctext x='200' y='196' font-family='monospace' font-size='15' fill='%236A7079' text-anchor='middle' letter-spacing='3'%3EZENTRO%3C/text%3E%3C/svg%3E";
+
 export default function ProductCard({ product }) {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
@@ -31,9 +36,14 @@ export default function ProductCard({ product }) {
     <Link to={`/product/${product._id}`} className="product-card card">
       <div className="product-card-image-wrap">
         <img
-          src={product.image || 'https://placehold.co/400x300/F7F7F5/6B7280?text=ZENTRO'}
+          src={product.image || FALLBACK_IMAGE}
           alt={product.name}
           className="product-card-image"
+          loading="lazy"
+          decoding="async"
+          onError={(e) => {
+            if (e.currentTarget.src !== FALLBACK_IMAGE) e.currentTarget.src = FALLBACK_IMAGE;
+          }}
         />
         <button
           type="button"

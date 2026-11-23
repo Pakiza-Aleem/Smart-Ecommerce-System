@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-col footer-brand">
           <p className="footer-logo">ZENTRO</p>
-          <p className="muted">Smart technology, thoughtfully curated.</p>
+          <p className="muted">Technology, centered on you.</p>
         </div>
 
         <div className="footer-col">

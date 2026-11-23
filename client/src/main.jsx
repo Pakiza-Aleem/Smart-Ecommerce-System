@@ -10,6 +10,8 @@ import './styles/navbar.css';
 import './styles/product.css';
 import './styles/pages.css';
 import './styles/zen.css';
+import './styles/tokens.css';
+import './styles/theme.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
