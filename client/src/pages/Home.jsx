@@ -1,4 +1,4 @@
-// pages/Home.jsx - hero, categories, featured products, Meet ZEN, Why ZENTRO
+// pages/Home.jsx - hero, category-wise swipeable featured strips, Meet ZEN, Why ZENTRO
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,6 +9,7 @@ import { openZenPanel, setActiveOperation } from '../store/slices/aiSlice';
 import { CATEGORIES } from './Shop';
 
 const FEATURED_CATEGORIES = CATEGORIES.filter(Boolean);
+const PREVIEW_PER_CATEGORY = 4;
 
 const WHY_ZENTRO = [
   { icon: Search, title: 'Smart Discovery', text: 'Describe what you need in plain language and ZEN finds it.' },
@@ -26,16 +27,18 @@ export default function Home() {
     dispatch(fetchProducts({ sort: 'rating' }));
   }, [dispatch]);
 
-  const featured = products.slice(0, 8);
-
   function handleAskZen() {
     dispatch(setActiveOperation('search'));
     dispatch(openZenPanel());
   }
 
+  function byCategory(cat) {
+    return products.filter((p) => p.category === cat).slice(0, PREVIEW_PER_CATEGORY);
+  }
+
   return (
     <div className="home-page">
-      {/* Hero */}
+      {/* Hero — compact two-column banner, smaller type/buttons on mobile */}
       <section className="hero">
         <div className="hero-content">
           <p className="eyebrow">Thoughtfully selected technology</p>
@@ -61,26 +64,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Categories */}
-      <section id="categories">
-        <div className="section-heading">
-          <h2>Featured Categories</h2>
-          <p>Find technology by category, curated for the ZENTRO catalog.</p>
-        </div>
-        <div className="category-row">
-          {FEATURED_CATEGORIES.map((c) => (
-            <Link key={c} to={`/shop?category=${encodeURIComponent(c)}`} className="category-pill">{c}</Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Featured products */}
+      {/* Category-wise featured strips — swipeable on mobile, grid on desktop */}
       <section>
-        <div className="section-heading">
-          <h2>Featured Products</h2>
-          <p>Top-rated picks from across the ZENTRO catalog.</p>
-        </div>
-        <ProductGrid products={featured} loading={status === 'loading' && featured.length === 0} />
+        {FEATURED_CATEGORIES.map((cat) => {
+          const items = byCategory(cat);
+          if (items.length === 0) return null;
+          return (
+            <div key={cat} className="category-strip">
+              <div className="section-heading">
+                <h2>{cat}</h2>
+                <p>Top-rated picks in {cat}, curated for the ZENTRO catalog.</p>
+              </div>
+              <ProductGrid
+                products={items}
+                loading={false}
+                variant="strip"
+                viewAllTo={`/shop?category=${encodeURIComponent(cat)}`}
+              />
+            </div>
+          );
+        })}
       </section>
 
       {/* Meet ZEN */}
@@ -96,7 +99,7 @@ export default function Home() {
         <div className="section-heading">
           <h2>Why ZENTRO</h2>
         </div>
-        <div className="why-grid">
+        <div className="why-grid why-grid--scroll">
           {WHY_ZENTRO.map(({ icon: Icon, title, text }) => (
             <div className="why-card card" key={title}>
               <Icon size={22} />
