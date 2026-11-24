@@ -1603,11 +1603,16 @@ label {
 
   .category-pill {
     flex: 0 0 auto;
-    width: 150px;
-    min-height: 96px;
+    width: 128px;
+    min-height: 80px;
     scroll-snap-align: start;
-    padding: 16px;
-    font-size: 13px;
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .category-pill::after {
+    width: 22px;
+    height: 22px;
   }
 
   .section-heading {
@@ -1773,7 +1778,18 @@ label {
   }
 
   .category-pill {
-    width: 134px;
+    flex: 0 0 auto;
+    width: 114px;
+    min-height: 72px;
+    scroll-snap-align: start;
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .category-pill::after {
+    width: 20px;
+    height: 20px;
+  }
     min-height: 88px;
   }
 

@@ -64,6 +64,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Categories — small icons, horizontally scrollable on phones */}
+      <section id="categories">
+        <div className="section-heading">
+          <h2>Categories</h2>
+          <p>Browse the ZENTRO catalog by category.</p>
+        </div>
+        <div className="category-row">
+          {FEATURED_CATEGORIES.map((c) => (
+            <Link key={c} to={`/shop?category=${encodeURIComponent(c)}`} className="category-pill">{c}</Link>
+          ))}
+        </div>
+      </section>
+
       {/* Category-wise featured strips — swipeable on mobile, grid on desktop */}
       <section>
         {FEATURED_CATEGORIES.map((cat) => {
